@@ -58,7 +58,7 @@ function validarDadosInput(cepInput) {
 
     buscarCepApi(cepInput.value);
     cepPesquisado.innerHTML = `Cep pesquisado: ${cepInput.value}`;
-    cepPesquisado.style.color = "#002036";
+    cepPesquisado.style.color = "#004364";
     cepInput.value = "";
 
   };

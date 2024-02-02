@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./src/assets/icon/localizador.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./src/style.css">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="./src/css/media-queries.css">
   <script src="./src/script.js" defer></script>
   <title>Bucar Enderço</title>
 </head>
@@ -12,8 +13,9 @@
 <body>
  
   <section class="container">
+
     <div class="container-input-cep">
-      <h1 class="title">Buscar Endereço por CEP</h1>
+      <h1 class="title">Buscar Endereço</h1>
       <div>
         <input type="text"
         placeholder="Digite o CEP"  
@@ -26,6 +28,7 @@
       </div>
       <p class="cep-pesquisado" id="cep-pesquisado"></p>
     </div>
+
     <div class="container-endereco">
       <label for="endereco" class="label-info"><span>Endereço: </span> 
         <input type="text" class="endereco logradouro" id="logradouro" />
@@ -43,6 +46,13 @@
         <input type="text" class="endereco uf" id="uf"/>
       </label>
     </div>
+    
+   <div class="container-link-api">
+    <a href="https://viacep.com.br/" target="_blank" class="link-api">
+      API ViaCep
+    </a>
+   </div>
+    
   </section> 
   
 </body>

@@ -10,30 +10,26 @@ body, html {
 }
 
 body {
-  background-color:#e2e2e2;
+  background-image: linear-gradient(to right top, #e0f2be, #c4eaaf, #a2e3a4, #79dc9f, #3ad49f);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Roboto', sans-serif;
+  
 }
 
 .container {
   background-color: #fff;
-  cursor: pointer;
-  width: 500px;
-  height: 250px;
+  width: 550px;
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
   transition: 0.3s;
 }
 
-.container:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
-}
-
 .title {
  margin: 10px 5px;
- color: #004364;
+ color: #004364
 }
 
 .input-cep {
@@ -47,6 +43,7 @@ body {
 
 button {
   background-color: #14648a;
+  cursor: pointer;
   color: #fff;
   border: 1px solid  lightgrey;
   border-radius: 20px;
@@ -82,6 +79,7 @@ button:hover {
 
 span {
   font-weight: 700;
+  color: #004364
 }
 
 .endereco {
@@ -90,4 +88,19 @@ span {
   outline: none;
   border: none;
   width: 250px;
+}
+
+.container-link-api {
+  display: flex;
+  justify-content: right;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.link-api {
+  margin-right: 25px;
+  text-decoration: none;
+  color: #004364;
+  font-size: 12px;
+  font-weight: 700;
 }
