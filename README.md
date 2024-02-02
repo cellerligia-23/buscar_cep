@@ -41,7 +41,7 @@ Esse projeto está hospedado no GitHub Pages, podendo ser acessado por [aqui](ht
   />
   <img 
     src="./src/assets/img/projeto-2.PNG"
-    alt="logo javascript" width="485"
+    alt="logo javascript" width="480"
   />
 </div>
 
