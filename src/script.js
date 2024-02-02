@@ -22,48 +22,63 @@ const  buscarCepApi = (cep) => {
         inputBairro.value = data.bairro;
         inputCidade.value = data.localidade;
         inputUf.value = data.uf;
-      }
-      // console.log(data);
+      };
+     
     });
 };
 
-function  limparInput() {
-  inputCep.value = "";
+function  limparInputs() {
+
+  inputEndereco.value = "";
+  inputBairro.value = "";
+  inputCidade.value = "";
+  inputUf.value = "";
+
 };
 
 function pegarCepPesquisado(cep) {
+
   cepPesquisado.innerHTML = `Cep pesquisado: ${cep}`;
+
 };
 
-function validarDadosInput (cepInput){
-  if (!Number.isNaN(cepInput) || cepInput === "" || cepInput.length !== 8 ) {
+function validarDadosInput(cepInput) {
+
+  const cepNumber = Number(cepInput.value);
+  const cepLength = cepInput.value.length;
+
+  if (isNaN(cepNumber) || cepLength !== 8) {
+
     cepPesquisado.innerHTML = `Cep pesquisado inválido`;
-    // cepPesquisado.style.color = "red";
-    return
-  } 
+    cepPesquisado.style.color = "red";
+
+    limparInputs();
+
+  } else {
+
+    buscarCepApi(cepInput.value);
+    cepPesquisado.innerHTML = `Cep pesquisado: ${cepInput.value}`;
+    cepPesquisado.style.color = "#002036";
+    cepInput.value = "";
+
+  };
+  
 };
 
-button.addEventListener('click', (evento) => {
-  console.log(inputCep.value);
-  validarDadosInput(inputCep.value)
+button.addEventListener('click', () => {
+  
+  validarDadosInput(inputCep);
 
-  buscarCepApi(inputCep.value);
-
-  pegarCepPesquisado(inputCep.value)
-  limparInput()
-
-  console.log(evento.which);
-})
+});
 
 inputCep.addEventListener("keypress", (evento) => {
+
   if (evento.key === 'Enter') {
+
     evento.preventDefault();
-    validarDadosInput(inputCep.value)
+    validarDadosInput(inputCep);
 
-    buscarCepApi(inputCep.value);
+  };
 
-    pegarCepPesquisado(inputCep.value)
-    limparInput()
-  }
 }); 
 
