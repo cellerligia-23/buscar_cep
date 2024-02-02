@@ -32,11 +32,22 @@ Esse projeto está hospedado no GitHub Pages, podendo ser acessado por [aqui](ht
   - Conceito básico de Media Queries (CSS); :white_check_mark:
   
 
-#### Imagens da página
+### Imagens da página:
 
 <div align="center">
   <img 
     src="./src/assets/img/projeto-1.PNG"
     alt="logo javascript" width="480"
+  />
+  <img 
+    src="./src/assets/img/projeto-2.PNG"
+    alt="logo javascript" width="485"
+  />
+</div>
 
+<div align="center">
+  <img 
+    src="./src/assets/img/projeto-3.PNG"
+    alt="logo javascript" width="480"
+  />
 </div>
